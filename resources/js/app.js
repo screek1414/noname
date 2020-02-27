@@ -33,16 +33,6 @@ Vue.component('search-form', require('./components/SearchForm').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.use(VeeValidate, {
-    fieldsBagName: 'veeFields',
-    classes: true,
-    validity: true,
-    classNames: {
-        valid: 'is-valid',
-        invalid: 'is-invalid',
-    },
-});
-
 Vue.component('paginate', Paginate);
 
 const app = new Vue({
