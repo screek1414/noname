@@ -123,10 +123,11 @@ class CourseController extends Controller
             if (auth()->check()) {
                 $is_admin = auth()->user()->hasRole('Admin');
             }
-            $course = Course::find($id);
+            $course = Course::with('comments')->find($id);
             return response()->json([
                 'course' => $course->toArray(),
                 'is_admin' => $is_admin,
+                'is_auth' => Auth::check()
             ]);
         }
         return response()->json(['message' => 'Course id is missing!'], 400);

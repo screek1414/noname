@@ -42,3 +42,6 @@ Route::get('dashboard/edit', 'DashboardController@index')->middleware('auth');
 Route::get('dashboard/show', 'DashboardController@index')->name('dashboard.show');
 Route::post('dashboard/users', 'DashboardController@users');
 Route::post('dashboard/changerole', 'DashboardController@changerole');
+
+Route::post('comments/store', 'CommentController@store');
+Route::post('comments/destroy', 'CommentController@destroy');

@@ -26,6 +26,7 @@ window.Vue = require('vue');
 Vue.component('courses-form', require('./views/Courses/CourseForm').default);
 Vue.component('dashboard-form', require('./views/Dashboard/DashboardForm').default);
 Vue.component('search-form', require('./components/SearchForm').default);
+Vue.component('comment-component', require('./components/CommentComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
